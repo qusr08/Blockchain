@@ -360,6 +360,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 181275987490766047, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181275987490766047, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181275987490766047, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181275987490766047, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206611654443055936, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206611654443055936, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206611654443055936, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206611654443055936, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800504899581261467, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800504899581261467, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800504899581261467, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 800504899581261467, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645085851791905996, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645085851791905996, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645085851791905996, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645085851791905996, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6964406817662662601, guid: dd52e618234cd83499ea1f4d6e6b1009, type: 3}
       propertyPath: m_Name
       value: Pause Manager

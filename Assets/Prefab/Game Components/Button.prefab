@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 1645833331
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3001449038190906842, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
+  m_Sprite: {fileID: 7642980859614939925, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,5 +111,8 @@ MonoBehaviour:
   - {fileID: 2058049638561703503, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: -2746839580606631015, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: 5372264662783423788, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
-  Doors: []
+  Doors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   IsFullyPressed: 0

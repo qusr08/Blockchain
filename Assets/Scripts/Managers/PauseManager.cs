@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
 	[Header(" --- Pause Manager Class ---")]
 	[SerializeField] private Canvas canvas;
+	[SerializeField] private GameObject parentObject;
 
 	private bool _isPaused;
 	public bool IsPaused {
@@ -15,7 +17,7 @@ public class PauseManager : MonoBehaviour {
 		set {
 			_isPaused = value;
 
-			canvas.enabled = _isPaused;
+			parentObject.SetActive(_isPaused);
 			Time.timeScale = _isPaused ? 0 : 1;
 		}
 	}
@@ -36,5 +38,16 @@ public class PauseManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			IsPaused = !IsPaused;
 		}
+	}
+
+	public void GoToMainMenu ( ) {
+		// Make sure to reset the time scale when going back to the titlescreen
+		Time.timeScale = 1;
+
+		SceneManager.LoadScene(0);
+	}
+
+	public void QuitGame ( ) {
+		Application.Quit( );
 	}
 }

@@ -44,7 +44,7 @@ public class ButtonObject : GameComponent {
 			}
 		}
 
-		UpdateSprite(IsPressed);
+		UpdateSprite(false);
 
 		name = $"{ButtonType} Button";
 	}
