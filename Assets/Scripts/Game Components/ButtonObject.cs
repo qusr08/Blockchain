@@ -49,6 +49,12 @@ public class ButtonObject : GameComponent {
 		name = $"{ButtonType} Button";
 	}
 
+	private void Update ( ) {
+		if (ButtonType == ButtonType.White && IsPressed) {
+			pauseManager.IsLevelComplete = true;
+		}
+	}
+
 	public void UpdateSprite (bool isPressed) {
 		if (isPressed) {
 			spriteRenderer.sprite = buttonOnSprites[(int) ButtonType];

@@ -68,6 +68,10 @@ public class BlockGroup : MonoBehaviour {
 		}
 	}
 
+	private void Start ( ) {
+		OnValidate( );
+	}
+
 	protected void Update ( ) {
 		// If there are no more connected blocks in this group, then destroy it
 		if (connectedBlocks.Count == 0) {
@@ -213,8 +217,10 @@ public class BlockGroup : MonoBehaviour {
 		connectedBlocks.Remove(block);
 
 		// Make sure the block is no longer in this group
-		block.transform.SetParent(gameManager.transform);
-		block.BlockGroup = null;
+		if (block != null) {
+			block.transform.SetParent(gameManager.transform);
+			block.BlockGroup = null;
+		}
 	}
 
 	/*

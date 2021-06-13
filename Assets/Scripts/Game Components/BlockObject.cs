@@ -100,7 +100,9 @@ public class BlockObject : GameComponent {
 		name = $"{BlockType} Block";
 	}
 
-	private void Start ( ) {
+	private new void Start ( ) {
+		base.Start( );
+
 		// Update all the blocks in the scene to form groups if they start next to each other
 		CheckSurroundingBlocks( );
 	}

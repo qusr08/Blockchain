@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  pauseManager: {fileID: 0}
   spriteRenderer: {fileID: 545682314638129094}
   animator: {fileID: 3159786269259736237}
   thisCollider2D: {fileID: 545682314638129092}
@@ -219,5 +220,4 @@ MonoBehaviour:
   - {fileID: 2182464128780118203, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: -5289736582898160604, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: 632630874191516457, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
-  buttons:
-  - {fileID: 0}
+  buttons: []

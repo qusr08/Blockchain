@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class GameComponent : MonoBehaviour {
 	[Header(" --- Game Component Class ---")]
 	[SerializeField] protected GameManager gameManager;
+	[SerializeField] protected PauseManager pauseManager;
 	[SerializeField] protected SpriteRenderer spriteRenderer;
 	[SerializeField] protected Animator animator;
 	[SerializeField] protected Collider2D thisCollider2D;
@@ -21,6 +22,10 @@ public abstract class GameComponent : MonoBehaviour {
 
 		if (gameManager == null) {
 			gameManager = FindObjectOfType<GameManager>( );
+		}
+
+		if (pauseManager == null) {
+			pauseManager = FindObjectOfType<PauseManager>( );
 		}
 
 		if (thisCollider2D == null) {
@@ -42,6 +47,10 @@ public abstract class GameComponent : MonoBehaviour {
 			y = Mathf.Floor(y);
 		}
 		transform.position = new Vector3(x, y, transform.position.z);
+	}
+
+	protected void Start ( ) {
+		OnValidate( );
 	}
 
 	public abstract void SetSpriteFrame (int index);
