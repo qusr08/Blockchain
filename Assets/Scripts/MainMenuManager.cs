@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour {
 	public void LoadLevel (int levelNumber) {
-		SceneManager.LoadScene(levelNumber - 1);
+		SceneManager.LoadScene(levelNumber);
 	}
 
 	public void QuitGame () {

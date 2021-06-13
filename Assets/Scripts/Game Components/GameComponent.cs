@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class GameComponent : MonoBehaviour {
-	public static float LINE_WIDTH = 0.05f;
-
 	[Header(" --- Game Component Class ---")]
 	[SerializeField] protected GameManager gameManager;
 	[SerializeField] protected SpriteRenderer spriteRenderer;

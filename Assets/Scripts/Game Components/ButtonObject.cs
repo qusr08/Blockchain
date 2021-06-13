@@ -11,8 +11,6 @@ public class ButtonObject : GameComponent {
 	[SerializeField] public ButtonType ButtonType;
 	[SerializeField] private List<Sprite> buttonOffSprites = new List<Sprite>( );
 	[SerializeField] private List<Sprite> buttonOnSprites = new List<Sprite>( );
-	// [Space]
-	// [SerializeField] private GameObject lineRendererPrefab;
 	[Space]
 	[SerializeField] public List<DoorObject> Doors = new List<DoorObject>( );
 
@@ -34,47 +32,14 @@ public class ButtonObject : GameComponent {
 		}
 	}
 
-	// private List<LineRenderer> lineRenderers = new List<LineRenderer>( );
-
 	private new void OnValidate ( ) {
 		base.OnValidate( );
 
 		Doors.Clear( );
-		// lineRenderers.Clear( );
 		if (ButtonType != ButtonType.White) {
 			foreach (DoorObject door in FindObjectsOfType(typeof(DoorObject))) {
 				if (door.name == $"{ButtonType} Door") {
 					Doors.Add(door);
-
-					/*
-					LineRenderer lineRenderer = Instantiate(lineRendererPrefab, transform).GetComponent<LineRenderer>( );
-
-					Color color = Color.black;
-					switch (ButtonType) {
-						case ButtonType.Red:
-							color = Color.red;
-							break;
-						case ButtonType.Orange:
-							color = Color.yellow;
-							break;
-						case ButtonType.Blue:
-							color = Color.blue;
-							break;
-					}
-
-					lineRenderer.startColor = color;
-					lineRenderer.endColor = color;
-					lineRenderer.startWidth = LINE_WIDTH;
-					lineRenderer.endWidth = LINE_WIDTH;
-
-					lineRenderer.positionCount = 2;
-					lineRenderer.useWorldSpace = true;
-					lineRenderer.SetPosition(0, transform.position);
-					lineRenderer.SetPosition(1, door.transform.position);
-
-					lineRenderer.enabled = false;
-					lineRenderers.Add(lineRenderer);
-					*/
 				}
 			}
 		}
@@ -83,20 +48,6 @@ public class ButtonObject : GameComponent {
 
 		name = $"{ButtonType} Button";
 	}
-
-	/*
-	private void OnMouseEnter ( ) {
-		foreach (LineRenderer lineRenderer in lineRenderers) {
-			lineRenderer.enabled = true;
-		}
-	}
-
-	private void OnMouseExit ( ) {
-		foreach (LineRenderer lineRenderer in lineRenderers) {
-			lineRenderer.enabled = false;
-		}
-	}
-	*/
 
 	public void UpdateSprite (bool isPressed) {
 		if (isPressed) {
