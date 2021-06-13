@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour {
 	[Header(" --- Pause Manager Class ---")]
 	[SerializeField] private Canvas canvas;
-	[SerializeField] private GameObject levelCompleteLayout;
-	[SerializeField] private GameObject pauseLayout;
-	[SerializeField] private CanvasGroup pauseGroup;
+	[SerializeField] private Animator animator;
 
 	private bool _isLevelComplete;
 	public bool IsLevelComplete {
@@ -20,12 +18,8 @@ public class PauseManager : MonoBehaviour {
 			_isLevelComplete = value;
 
 			if (_isLevelComplete) {
-				IsPaused = false;
+				animator.SetTrigger("IsComplete");
 			}
-
-			pauseGroup.alpha = _isLevelComplete ? 1 : 0;
-			levelCompleteLayout.SetActive(_isLevelComplete);
-			Time.timeScale = _isPaused ? 0 : 1;
 		}
 	}
 
@@ -38,9 +32,8 @@ public class PauseManager : MonoBehaviour {
 		set {
 			_isPaused = value;
 
-			pauseGroup.alpha = _isPaused ? 1 : 0;
-			pauseLayout.SetActive(_isPaused);
-			Time.timeScale = _isPaused ? 0 : 1;
+			animator.SetBool("IsPaused", _isPaused);
+			SetTimeScale(_isPaused ? 0 : 1);
 		}
 	}
 
@@ -49,11 +42,9 @@ public class PauseManager : MonoBehaviour {
 			canvas = GetComponent<Canvas>( );
 		}
 
-		if (GameObject.Find("Camera") != null) {
-			canvas.worldCamera = GameObject.Find("Camera").GetComponent<Camera>( );
+		if (animator == null) {
+			animator = GetComponent<Animator>( );
 		}
-
-		IsPaused = false;
 	}
 
 	private void Update ( ) {
@@ -66,10 +57,14 @@ public class PauseManager : MonoBehaviour {
 		}
 	}
 
-	public void LoadNextLevel ( ) {
-		Time.timeScale = 1;
+	public void SetTimeScale (int value) {
+		Time.timeScale = value;
+	}
 
-		if (SceneManager.GetActiveScene( ).buildIndex + 1 >= SceneManager.sceneCount) {
+	public void LoadNextLevel ( ) {
+		SetTimeScale(1);
+
+		if (SceneManager.GetActiveScene( ).buildIndex + 1 >= SceneManager.sceneCountInBuildSettings) {
 			GoToMainMenu( );
 		} else {
 			SceneManager.LoadScene(SceneManager.GetActiveScene( ).buildIndex + 1);
@@ -77,14 +72,13 @@ public class PauseManager : MonoBehaviour {
 	}
 
 	public void ReloadScene ( ) {
-		Time.timeScale = 1;
+		SetTimeScale(1);
 
 		SceneManager.LoadScene(SceneManager.GetActiveScene( ).buildIndex);
 	}
 
 	public void GoToMainMenu ( ) {
-		// Make sure to reset the time scale when going back to the titlescreen
-		Time.timeScale = 1;
+		SetTimeScale(1);
 
 		SceneManager.LoadScene(0);
 	}
