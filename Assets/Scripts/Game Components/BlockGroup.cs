@@ -6,16 +6,22 @@ using UnityEngine;
 
 public class BlockGroup : MonoBehaviour {
 	[Header(" --- Block Group Class ---")]
-	[SerializeField] private GameManager gameManager;
-	[SerializeField] private AudioSource audioSource;
+	[SerializeField] protected GameManager gameManager;
+	[SerializeField] protected PauseManager pauseManager;
+	[SerializeField] protected AudioSource audioSource;
 	[Space]
 	[SerializeField] private List<AudioClip> moveClips = new List<AudioClip>( );
 	[Space]
-	[SerializeField] private List<BlockObject> connectedBlocks = new List<BlockObject>( );
+	[SerializeField] protected List<BlockObject> connectedBlocks = new List<BlockObject>( );
 
 	// Whether or not this group can move
 	public bool CanMove {
 		get {
+			// If the game is paused, then blocks should not be able to move
+			if (pauseManager.IsPaused) {
+				return false;
+			}
+
 			// This group can only move if every block has finished moving
 			foreach (BlockObject block in connectedBlocks) {
 				// If one block can't move yet, then the entire group can't move
@@ -45,6 +51,10 @@ public class BlockGroup : MonoBehaviour {
 	protected void OnValidate ( ) {
 		if (gameManager == null) {
 			gameManager = FindObjectOfType<GameManager>( );
+		}
+
+		if (pauseManager == null) {
+			pauseManager = FindObjectOfType<PauseManager>( );
 		}
 
 		if (audioSource == null) {
@@ -227,6 +237,9 @@ public class BlockGroup : MonoBehaviour {
 		}
 	}
 
+	/*
+	 * Play a random move sound
+	 */
 	private void PlayMoveSound ( ) {
 		audioSource.clip = moveClips[Utils.Random.Next(0, moveClips.Count)];
 		audioSource.Play( );

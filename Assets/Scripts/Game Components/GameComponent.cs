@@ -8,6 +8,7 @@ public abstract class GameComponent : MonoBehaviour {
 	[SerializeField] protected SpriteRenderer spriteRenderer;
 	[SerializeField] protected Animator animator;
 	[SerializeField] protected Collider2D thisCollider2D;
+	[SerializeField] protected AudioSource audioSource;
 
 	protected void OnValidate ( ) {
 		if (spriteRenderer == null) {
@@ -24,6 +25,10 @@ public abstract class GameComponent : MonoBehaviour {
 
 		if (thisCollider2D == null) {
 			thisCollider2D = GetComponent<Collider2D>( );
+		}
+
+		if (audioSource == null) {
+			audioSource = GetComponent<AudioSource>( );
 		}
 
 		// Make sure this game component is on the grid when being placed in the scene
