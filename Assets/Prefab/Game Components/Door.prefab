@@ -219,5 +219,4 @@ MonoBehaviour:
   - {fileID: 2182464128780118203, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: -5289736582898160604, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: 632630874191516457, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
-  buttons:
-  - {fileID: 0}
+  buttons: []

@@ -128,19 +128,21 @@ public class BlockObject : GameComponent {
 		transform.position = toPosition;
 		movement = null;
 
-		// Check the surrounding blocks to see if any groups/combinations need to happen
-		CheckSurroundingBlocks( );
-
 		// Check to see if the group that this block is part of has been destroyed or not
 		if (BlockGroup == null) {
 			if (!IsGrounded) {
 				Destroy( );
+				yield break;
 			}
 		} else {
 			if (!BlockGroup.IsGrounded) {
 				BlockGroup.Destroy( );
+				yield break;
 			}
 		}
+
+		// Check the surrounding blocks to see if any groups/combinations need to happen
+		CheckSurroundingBlocks( );
 	}
 
 	/*
