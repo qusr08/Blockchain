@@ -17,9 +17,8 @@ public class PauseManager : MonoBehaviour {
 		set {
 			_isLevelComplete = value;
 
-			if (_isLevelComplete) {
-				animator.SetTrigger("IsComplete");
-			}
+			animator.SetBool("IsLevelComplete", _isLevelComplete);
+			SetTimeScale(_isLevelComplete ? 0 : 1);
 		}
 	}
 

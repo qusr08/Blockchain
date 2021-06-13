@@ -30,6 +30,8 @@ public class BlockObject : GameComponent {
 	[SerializeField] private List<Sprite> purpleSprites = new List<Sprite>( );
 	[Space]
 	[SerializeField] public BlockGroup BlockGroup;
+	[Space]
+	[SerializeField] private AudioClip deathSound;
 
 	// Whether or not the block is part of a group or not
 	public bool IsConnected {
@@ -302,6 +304,8 @@ public class BlockObject : GameComponent {
 	public void Destroy ( ) {
 		if (!IsDead) {
 			IsDead = true;
+
+			audioSource.PlayOneShot(deathSound);
 		}
 	}
 

@@ -18,7 +18,7 @@ public class BlockGroup : MonoBehaviour {
 	public bool CanMove {
 		get {
 			// If the game is paused, then blocks should not be able to move
-			if (pauseManager.IsPaused) {
+			if (pauseManager.IsPaused || pauseManager.IsLevelComplete) {
 				return false;
 			}
 
@@ -247,7 +247,6 @@ public class BlockGroup : MonoBehaviour {
 	 * Play a random move sound
 	 */
 	private void PlayMoveSound ( ) {
-		audioSource.clip = moveClips[Utils.Random.Next(0, moveClips.Count)];
-		audioSource.Play( );
+		audioSource.PlayOneShot(moveClips[Utils.Random.Next(0, moveClips.Count)]);
 	}
 }
