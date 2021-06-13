@@ -7,6 +7,9 @@ using UnityEngine;
 public class BlockGroup : MonoBehaviour {
 	[Header(" --- Block Group Class ---")]
 	[SerializeField] private GameManager gameManager;
+	[SerializeField] private AudioSource audioSource;
+	[Space]
+	[SerializeField] private List<AudioClip> moveClips = new List<AudioClip>( );
 	[Space]
 	[SerializeField] private List<BlockObject> connectedBlocks = new List<BlockObject>( );
 
@@ -42,6 +45,10 @@ public class BlockGroup : MonoBehaviour {
 	protected void OnValidate ( ) {
 		if (gameManager == null) {
 			gameManager = FindObjectOfType<GameManager>( );
+		}
+
+		if (audioSource == null) {
+			audioSource = GetComponent<AudioSource>( );
 		}
 
 		// Add all child block objects to the parent object
@@ -150,6 +157,8 @@ public class BlockGroup : MonoBehaviour {
 				blocksToCheck.RemoveAt(i);
 			}
 
+			PlayMoveSound( );
+
 			// If all the blocks can be pushed, then move all of the blocks in the specified direction
 			foreach (BlockObject block in blocksToMove) {
 				block.Move(direction);
@@ -216,5 +225,10 @@ public class BlockGroup : MonoBehaviour {
 		for (int i = connectedBlocks.Count - 1; i >= 0; i--) {
 			connectedBlocks[i].Destroy( );
 		}
+	}
+
+	private void PlayMoveSound ( ) {
+		audioSource.clip = moveClips[Utils.Random.Next(0, moveClips.Count)];
+		audioSource.Play( );
 	}
 }

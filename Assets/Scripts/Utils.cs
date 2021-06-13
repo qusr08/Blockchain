@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Utils {
+	public static System.Random Random = new System.Random( );
+
 	/*
 	 * Convert a Vector3 to a Vector3Int object
 	 * 
