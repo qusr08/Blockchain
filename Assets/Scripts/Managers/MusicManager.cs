@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour {
+	private static MusicManager instance;
+
 	[Header(" --- Music Manager Class ---")]
 	[SerializeField] private AudioSource audioSource;
 	[Space]
 	[SerializeField] private List<AudioClip> music = new List<AudioClip>( );
-
-	private static MusicManager instance;
 
 	private void Awake ( ) {
 		DontDestroyOnLoad(transform.gameObject);
