@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
 	[Header(" --- Pause Manager Class ---")]
-	[SerializeField] private Canvas canvas;
+	[SerializeField] private TransitionManager transitionManager;
 	[SerializeField] private Animator animator;
 
 	private bool _isLevelComplete;
@@ -38,8 +38,8 @@ public class PauseManager : MonoBehaviour {
 	}
 
 	private void OnValidate ( ) {
-		if (canvas == null) {
-			canvas = GetComponent<Canvas>( );
+		if (transitionManager == null) {
+			transitionManager = FindObjectOfType<TransitionManager>( );
 		}
 
 		if (animator == null) {
@@ -53,7 +53,7 @@ public class PauseManager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.R)) {
-			ReloadScene( );
+			transitionManager.ReloadScene( );
 		}
 	}
 
@@ -61,29 +61,23 @@ public class PauseManager : MonoBehaviour {
 		Time.timeScale = value;
 	}
 
-	public void LoadNextLevel ( ) {
-		SetTimeScale(1);
-
-		if (SceneManager.GetActiveScene( ).buildIndex + 1 >= SceneManager.sceneCountInBuildSettings) {
-			GoToMainMenu( );
-		} else {
-			SceneManager.LoadScene(SceneManager.GetActiveScene( ).buildIndex + 1);
-		}
-	}
-
-	public void ReloadScene ( ) {
-		SetTimeScale(1);
-
-		SceneManager.LoadScene(SceneManager.GetActiveScene( ).buildIndex);
+	public void QuitGame ( ) {
+		transitionManager.QuitGame( );
 	}
 
 	public void GoToMainMenu ( ) {
-		SetTimeScale(1);
-
-		SceneManager.LoadScene(0);
+		transitionManager.GoToMainMenu( );
 	}
 
-	public void QuitGame ( ) {
-		Application.Quit( );
+	public void LoadNextLevel ( ) {
+		transitionManager.LoadNextLevel( );
+	}
+
+	public void LoadLevel (int levelNumber) {
+		transitionManager.LoadLevel(levelNumber);
+	}
+
+	public void ReloadScene ( ) {
+		transitionManager.ReloadScene( );
 	}
 }
