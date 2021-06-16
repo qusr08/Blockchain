@@ -22,3 +22,4 @@
 > - Add particle effects
 > - Have music fade in and out instead of hard cutting off
 > - Have music be random, but make sure one songs doesn't play twice in a row
+> - Add more animations on blocks / buttons / doors to make it more engaging
