@@ -23,3 +23,5 @@
 > - Have music fade in and out instead of hard cutting off
 > - Have music be random, but make sure one songs doesn't play twice in a row
 > - Add more animations on blocks / buttons / doors to make it more engaging
+>   - For example, since the game is set in space, the buttons / text could float around a little to make the UI menus more dynamic
+> - Have level auto-restart if the player block dies
