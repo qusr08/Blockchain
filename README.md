@@ -16,7 +16,7 @@
 > - More levels
 > - Accessibility settings / features
 > - Have level number / name show up when paused in-game
-> - Make UI button animations more snappy / faster [ADDED v1.1]
+> - Make UI button animations more snappy / faster [ADDED v1.1u]
 > - Have UI buttons change to a random block color when clicked on / hovered
 > - Add post-processing effects
 > - Add particle effects
