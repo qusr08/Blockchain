@@ -209,10 +209,7 @@ MonoBehaviour:
   - {fileID: 2058049638561703503, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: -2746839580606631015, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
   - {fileID: 5372264662783423788, guid: 7db1803a045ca7f4e89d8b7baa258646, type: 3}
-  Doors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Doors: []
   activeSound: {fileID: 8300000, guid: 07558a7e635f2aa478ec8ba0b5256dee, type: 3}
   winSound: {fileID: 8300000, guid: 073b33dfc7efe8346855c6b6397ad869, type: 3}
   IsFullyPressed: 0
