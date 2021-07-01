@@ -6,11 +6,22 @@ using UnityEngine.SceneManagement;
 public class TransitionManager : MonoBehaviour {
 	[Header(" --- Transition Manager Class ---")]
 	[SerializeField] private Animator animator;
+	[SerializeField] private Canvas canvas;
 
 	private void OnValidate ( ) {
 		if (animator == null) {
 			animator = GetComponent<Animator>( );
-		}	
+		}
+
+		if (canvas == null) {
+			canvas = GetComponent<Canvas>( );
+		}
+
+		canvas.enabled = false;
+	}
+
+	private void Awake ( ) {
+		canvas.enabled = true;
 	}
 
 	public void QuitGame ( ) {

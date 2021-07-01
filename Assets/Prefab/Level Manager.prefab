@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7552623151365952363
+--- !u!1 &6898989709572249212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7552623151365952362}
-  - component: {fileID: 4001294029956455435}
+  - component: {fileID: 3179405372868251317}
+  - component: {fileID: 5243309721762236411}
   m_Layer: 0
-  m_Name: Block Group
+  m_Name: Level Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7552623151365952362
+--- !u!4 &3179405372868251317
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7552623151365952363}
+  m_GameObject: {fileID: 6898989709572249212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,23 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4001294029956455435
+--- !u!114 &5243309721762236411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7552623151365952363}
+  m_GameObject: {fileID: 6898989709572249212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf78a18c5978e0c4a92e4b869129f0ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 20a7c3f4cfe50db46bc2ef18ff59f05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  pauseManager: {fileID: 0}
-  audioSource: {fileID: 0}
-  moveClips:
-  - {fileID: 8300000, guid: 2109466e14b9a6c48886eb7071e95b77, type: 3}
-  - {fileID: 8300000, guid: bb62550ab15f1d64283463e6dc60ea9c, type: 3}
-  - {fileID: 8300000, guid: e866aa87bf55963459e22a5c187b760b, type: 3}
-  connectedBlocks: []
+  blockGroupPrefab: {fileID: 7552623151365952363, guid: 4dc6504b23775634f8e39a0b08339605, type: 3}
+  buttons: []
+  doors: []
+  blocks: []

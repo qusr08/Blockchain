@@ -7,10 +7,9 @@ using UnityEngine;
 public class BlockGroup : MonoBehaviour {
 	[Header(" --- Block Group Class ---")]
 	[SerializeField] protected GameManager gameManager;
+	[SerializeField] protected LevelManager levelManager;
 	[SerializeField] protected PauseManager pauseManager;
-	[SerializeField] protected AudioSource audioSource;
-	[Space]
-	[SerializeField] private List<AudioClip> moveClips = new List<AudioClip>( );
+
 	[Space]
 	[SerializeField] protected List<BlockObject> connectedBlocks = new List<BlockObject>( );
 
@@ -49,16 +48,16 @@ public class BlockGroup : MonoBehaviour {
 	}
 
 	protected void OnValidate ( ) {
-		if (gameManager == null) {
-			gameManager = FindObjectOfType<GameManager>( );
+		if (levelManager == null) {
+			levelManager = FindObjectOfType<LevelManager>( );
 		}
 
 		if (pauseManager == null) {
 			pauseManager = FindObjectOfType<PauseManager>( );
 		}
 
-		if (audioSource == null) {
-			audioSource = GetComponent<AudioSource>( );
+		if (gameManager == null) {
+			gameManager = FindObjectOfType<GameManager>( );
 		}
 
 		// Add all child block objects to the parent object
@@ -171,7 +170,7 @@ public class BlockGroup : MonoBehaviour {
 				blocksToCheck.RemoveAt(i);
 			}
 
-			PlayMoveSound( );
+			gameManager.PlaySoundEffect(SoundEffectType.BLOCK_MOVE);
 
 			// If all the blocks can be pushed, then move all of the blocks in the specified direction
 			foreach (BlockObject block in blocksToMove) {
@@ -218,7 +217,7 @@ public class BlockGroup : MonoBehaviour {
 
 		// Make sure the block is no longer in this group
 		if (block != null) {
-			block.transform.SetParent(gameManager.transform);
+			block.transform.SetParent(levelManager.transform);
 			block.BlockGroup = null;
 		}
 	}
@@ -241,12 +240,5 @@ public class BlockGroup : MonoBehaviour {
 		for (int i = connectedBlocks.Count - 1; i >= 0; i--) {
 			connectedBlocks[i].Destroy( );
 		}
-	}
-
-	/*
-	 * Play a random move sound
-	 */
-	private void PlayMoveSound ( ) {
-		audioSource.PlayOneShot(moveClips[Utils.Random.Next(0, moveClips.Count)]);
 	}
 }

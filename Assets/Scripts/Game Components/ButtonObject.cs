@@ -13,9 +13,6 @@ public class ButtonObject : GameComponent {
 	[SerializeField] private List<Sprite> buttonOnSprites = new List<Sprite>( );
 	[Space]
 	[SerializeField] public List<DoorObject> Doors = new List<DoorObject>( );
-	[Space]
-	[SerializeField] public AudioClip activeSound;
-	[SerializeField] public AudioClip winSound;
 
 	[HideInInspector] public bool IsFullyPressed;
 	private bool lastPressedState;
@@ -25,18 +22,18 @@ public class ButtonObject : GameComponent {
 			lastPressedState = _isPressed;
 
 			// Unity is dumb and forced my hand to check this. I have no idea why
-			if (gameManager == null) {
+			if (levelManager == null) {
 				return false;
 			}
 
 			// Check to see if the button is either fully pressed or if there is a block on it
-			_isPressed = gameManager.CheckForBlockAtPosition(transform.position) || IsFullyPressed;
+			_isPressed = levelManager.CheckForBlockAtPosition(transform.position) || IsFullyPressed;
 
 			// Update the sprite
 			UpdateSprite(_isPressed);
 
 			if (lastPressedState != _isPressed) {
-				audioSource.PlayOneShot(activeSound);
+				gameManager.PlaySoundEffect(SoundEffectType.BUTTON);
 			}
 
 			return _isPressed;
@@ -65,7 +62,7 @@ public class ButtonObject : GameComponent {
 			IsFullyPressed = true;
 			pauseManager.IsLevelComplete = true;
 
-			audioSource.PlayOneShot(winSound);
+			gameManager.PlaySoundEffect(SoundEffectType.WIN);
 		}
 	}
 

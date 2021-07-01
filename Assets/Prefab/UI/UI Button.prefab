@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 866768169550635455}
   - component: {fileID: 866768169550635450}
   - component: {fileID: 7949935011035691886}
+  - component: {fileID: 1385693715411676481}
+  - component: {fileID: 6430979958286306229}
   m_Layer: 5
   m_Name: UI Button
   m_TagString: Untagged
@@ -241,3 +243,31 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1385693715411676481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866768169550635453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a132ba60364cc4a9c6ed5dd4c50223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTime: 5
+  positionChange: 0.1
+  rotationChange: 1.5
+--- !u!114 &6430979958286306229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866768169550635453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb66e58d104503a469537d008c40412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 866768169550635448}

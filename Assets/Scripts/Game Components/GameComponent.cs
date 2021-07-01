@@ -4,12 +4,13 @@ using UnityEngine;
 
 public abstract class GameComponent : MonoBehaviour {
 	[Header(" --- Game Component Class ---")]
-	[SerializeField] protected GameManager gameManager;
+	[SerializeField] protected LevelManager levelManager;
 	[SerializeField] protected PauseManager pauseManager;
+	[SerializeField] protected GameManager gameManager;
+	[Space]
 	[SerializeField] protected SpriteRenderer spriteRenderer;
 	[SerializeField] protected Animator animator;
 	[SerializeField] protected Collider2D thisCollider2D;
-	[SerializeField] protected AudioSource audioSource;
 
 	protected void OnValidate ( ) {
 		if (spriteRenderer == null) {
@@ -24,16 +25,16 @@ public abstract class GameComponent : MonoBehaviour {
 			gameManager = FindObjectOfType<GameManager>( );
 		}
 
+		if (levelManager == null) {
+			levelManager = FindObjectOfType<LevelManager>( );
+		}
+
 		if (pauseManager == null) {
 			pauseManager = FindObjectOfType<PauseManager>( );
 		}
 
 		if (thisCollider2D == null) {
 			thisCollider2D = GetComponent<Collider2D>( );
-		}
-
-		if (audioSource == null) {
-			audioSource = GetComponent<AudioSource>( );
 		}
 
 		// Make sure this game component is on the grid when being placed in the scene

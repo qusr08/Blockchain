@@ -30,8 +30,6 @@ public class BlockObject : GameComponent {
 	[SerializeField] private List<Sprite> purpleSprites = new List<Sprite>( );
 	[Space]
 	[SerializeField] public BlockGroup BlockGroup;
-	[Space]
-	[SerializeField] private AudioClip deathSound;
 
 	// Whether or not the block is part of a group or not
 	public bool IsConnected {
@@ -199,7 +197,7 @@ public class BlockObject : GameComponent {
 						block.BlockGroup.AddBlock(this);
 					} else {
 						// Create a new group if both blocks do not have groups
-						gameManager.CreateGroup(new List<BlockObject> { this, block });
+						levelManager.CreateGroup(new List<BlockObject> { this, block });
 					}
 				}
 			}
@@ -305,7 +303,7 @@ public class BlockObject : GameComponent {
 		if (!IsDead) {
 			IsDead = true;
 
-			audioSource.PlayOneShot(deathSound);
+			gameManager.PlaySoundEffect(SoundEffectType.BLOCK_DEATH);
 		}
 	}
 
