@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum SoundEffectType {
 	BLOCK_DEATH,
@@ -21,7 +22,6 @@ public class GameManager : MonoBehaviour {
 	public const float MUSIC_FADE_DURATION = 4;
 	public const float EFFECTS_REPEAT_DELAY = 0.2f;
 
-	private static LevelInfo currentLevelInfo;
 	private static GameManager instance;
 
 	[Header(" --- Game Manager Class ---")]
@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour {
 		} else {
 			Destroy(gameObject);
 		}
+
+		// FIGURE OUT A WAY TO LOAD THE LEVEL INFO
+		// LOADING THE LEVEL NAME DIFFERENTLY MIGHT BE EASIER
+		// MAYBE SET THE NAME OF THE SCENE TO BE THE NAME OF THE LEVEL?
+		// IF I DO THIS, THEN THE BUTTONS IN THE LEVEL SELECT MENU WILL NEED TO UPDATE IN ONVALIDATE
 	}
 
 	private void Start ( ) {

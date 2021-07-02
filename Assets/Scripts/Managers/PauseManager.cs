@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour {
 	[Header(" --- Pause Manager Class ---")]
 	[SerializeField] private TransitionManager transitionManager;
+	[Space]
 	[SerializeField] private Animator animator;
+	[Space]
+	[SerializeField] private Text levelTitle;
+	[SerializeField] private Text levelNumber;
 
 	private bool _isLevelComplete;
 	public bool IsLevelComplete {
@@ -46,13 +51,22 @@ public class PauseManager : MonoBehaviour {
 		}
 	}
 
+	private void Awake ( ) {
+		/*
+		if (GameManager.currentLevelInfo != null) {
+			levelTitle.text = GameManager.currentLevelInfo.LevelName;
+			levelNumber.text = $"Level {GameManager.currentLevelInfo.LevelNumber}";
+		}
+		*/
+	}
+
 	private void Update ( ) {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			IsPaused = !IsPaused;
 		}
 
 		if (Input.GetKeyDown(KeyCode.R)) {
-			transitionManager.ReloadScene( );
+			ReloadScene( );
 		}
 	}
 
@@ -61,22 +75,32 @@ public class PauseManager : MonoBehaviour {
 	}
 
 	public void QuitGame ( ) {
-		transitionManager.QuitGame( );
+		if (transitionManager != null) {
+			transitionManager.QuitGame( );
+		}
 	}
 
 	public void GoToMainMenu ( ) {
-		transitionManager.GoToMainMenu( );
+		if (transitionManager != null) {
+			transitionManager.GoToMainMenu( );
+		}
 	}
 
 	public void LoadNextLevel ( ) {
-		transitionManager.LoadNextLevel( );
+		if (transitionManager != null) {
+			transitionManager.LoadNextLevel( );
+		}
 	}
 
 	public void LoadLevel (int levelNumber) {
-		transitionManager.LoadLevel(levelNumber);
+		if (transitionManager != null) {
+			transitionManager.LoadLevel(levelNumber);
+		}
 	}
 
 	public void ReloadScene ( ) {
-		transitionManager.ReloadScene( );
+		if (transitionManager != null) {
+			transitionManager.ReloadScene( );
+		}
 	}
 }

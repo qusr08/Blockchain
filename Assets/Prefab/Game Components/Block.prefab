@@ -164,12 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca42299681ff7c545b85687fac6a8f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  levelManager: {fileID: 0}
   pauseManager: {fileID: 0}
+  gameManager: {fileID: 0}
   spriteRenderer: {fileID: 8687970674683019237}
   animator: {fileID: 5729427176991033203}
   thisCollider2D: {fileID: 8687970674683019239}
-  audioSource: {fileID: 0}
   floorTilemap: {fileID: 0}
   BlockType: 3
   playerSprites:
@@ -199,4 +199,3 @@ MonoBehaviour:
   - {fileID: 4354781316875873519, guid: 5106ec10b8675e643845b1264762dcbe, type: 3}
   - {fileID: -3828748445219874928, guid: 5106ec10b8675e643845b1264762dcbe, type: 3}
   BlockGroup: {fileID: 0}
-  deathSound: {fileID: 8300000, guid: 2993e931b9b0a1c4d94a4b3329e05b65, type: 3}

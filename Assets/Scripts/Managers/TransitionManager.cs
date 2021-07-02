@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour {
+	public const float TRANSITION_FADE_DURATION = 1f;
+
 	[Header(" --- Transition Manager Class ---")]
 	[SerializeField] private Animator animator;
 	[SerializeField] private Canvas canvas;
@@ -41,7 +43,7 @@ public class TransitionManager : MonoBehaviour {
 	}
 
 	public void LoadLevel (int levelNumber) {
-		// Just in case
+		// Just in case, reset the timescale
 		Time.timeScale = 1;
 
 		StartCoroutine(ILoadLevel(levelNumber));
@@ -54,7 +56,7 @@ public class TransitionManager : MonoBehaviour {
 	private IEnumerator ILoadLevel (int levelIndex) {
 		animator.SetTrigger("Fade");
 
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(TRANSITION_FADE_DURATION);
 
 		SceneManager.LoadScene(levelIndex);
 	}

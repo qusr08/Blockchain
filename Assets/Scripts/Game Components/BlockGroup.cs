@@ -78,6 +78,14 @@ public class BlockGroup : MonoBehaviour {
 		}
 	}
 
+	protected void LateUpdate ( ) {
+		for (int i = connectedBlocks.Count - 1; i >= 0; i--) {
+			if (connectedBlocks[i] == null) {
+				connectedBlocks.RemoveAt(i);
+			}
+		}
+	}
+
 	/*
 	 * Merge this group with another one
 	 */

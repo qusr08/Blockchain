@@ -10,6 +10,10 @@ public class PlayerGroup : BlockGroup {
 		MoveWithKeyboard( );
 	}
 
+	private void OnDestroy ( ) {
+		pauseManager.ReloadScene( );
+	}
+
 	private void MoveWithKeyboard ( ) {
 		if (Input.GetKey(KeyCode.W)) {
 			Move(Vector2.up);

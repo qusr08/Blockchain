@@ -14,18 +14,17 @@
 > - Have level number / name show up when paused in-game
 > - Add post-processing effects
 > - Add particle effects
-> - Have level auto-restart if the player block dies
 > - Have free-look feature
 > - Add transitions between main menu states
 
 # Version Log
 > ### jv1.0
-> ##### This is the version that was submitted to the GMTK 2021 Game Jam
+> #### This is the version that was submitted to the GMTK 2021 Game Jam
 
 > ### bv1.1
-> ##### Major update that adds a lot of the features we wanted to add during the jam into the game
+> #### Major update that adds a lot of the features we wanted to add during the jam into the game
 > - Fixed some major puzzle-breaking bugs in certain levels
-> - Improved UI
+> - Modified and improved UI
 > - Disabled block colliders when they fall off so there is no delay/interferance when moving
 > - Fixed sound effects being played multiple times over each other if two objects did something at the same time
 > - Made music fade in and out instead of hard-cutting at the end of songs
@@ -36,11 +35,11 @@
 > - --- Added transitions between main menu states
 > - --- Added some post-processing effects
 > - Added "floating" animation to UI text and buttons
-> - Made buttons turn a random block color when hovered
-> - --- The level now auto-restarts when the player block dies
+> - Made UI buttons turn a random block color when the mouse is hovered over them
+> - The level now auto-restarts when the player block dies
 > - --- An undo button was added to help with puzzle solving
 > - --- You can now free-look around the player by holding down the right mouse button and moving the mouse around
 > - Implemented multiple developer tools
->  - Added bitmasking for surrounding edge tiles to limit the time it takes to build levels
->  - --- Added grouping system for buttons/doors to make it easier to build levels
->  - --- General code cleanup and improvements
+>	- Added bitmasking for surrounding edge tiles to limit the time it takes to build levels
+>	- --- Added grouping system for buttons/doors to make it easier to build levels
+>	- --- General code cleanup and improvements

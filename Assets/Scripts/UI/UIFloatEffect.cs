@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UIFloatEffect : MonoBehaviour {
 	[Header(" --- UI Float Effect Class --- ")]
-	[SerializeField] private float moveTime;
-	[SerializeField] private float positionChange;
-	[SerializeField] private float rotationChange;
+	[SerializeField] private float moveTime = 5;
+	[SerializeField] private float positionChange = 0.1f;
+	[SerializeField] private float rotationChange = 1.5f;
 
 	private Vector3 startingPosition;
 	private Vector3 startingRotationEulers;
@@ -35,7 +35,7 @@ public class UIFloatEffect : MonoBehaviour {
 
 			lastTime = Time.unscaledTime;
 		}
-		
+
 		// Smoothly transition between the last location and the new location over the time specified
 		float t = (Time.unscaledTime - lastTime) / moveTime;
 		transform.position = Vector3.Slerp(lastPosition, toPosition, t);
