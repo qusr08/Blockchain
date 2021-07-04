@@ -30,8 +30,8 @@
 > - Made music fade in and out instead of hard-cutting at the end of songs
 > - Made sure two songs don't play back-to-back
 > - --- Made level name and number show up in level complete and pause menus
-> - --- Made background move with mouse on the title screen
-> - --- Made background move slightly in-game when the player moves
+> - Made background move with mouse on the title screen
+> - Made background move slightly in-game when the player moves
 > - --- Added transitions between main menu states
 > - --- Added some post-processing effects
 > - Added "floating" animation to UI text and buttons
