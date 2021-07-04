@@ -23,6 +23,18 @@ public static class Utils {
 		return new Vector3Int((int) vector3.x, (int) vector3.y, (int) vector3.z);
 	}
 
+	public static float Limit (float value, float min, float max) {
+		if (value < min) {
+			value = min;
+		}
+
+		if (value > max) {
+			value = max;
+		}
+
+		return value;
+	}
+
 	/*
 	 * Choose a random object from an array
 	 */
