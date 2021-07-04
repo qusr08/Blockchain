@@ -4,12 +4,36 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
+	public static Dictionary<int, string> LEVEL_NAMES = new Dictionary<int, string>( ) {
+		[1] = "Starship One",
+		[2] = "A Stone's Throw",
+		[3] = "Reaching Out",
+		[4] = "A Sticky Situation",
+		[5] = "Hook, Line, and Sinker",
+		[6] = "Take a U-Turn",
+		[7] = "Time is Fleeting",
+		[8] = "Push Off",
+		[9] = "Double Trouble",
+		[10] = "Through The Back Door",
+		[11] = "Strike Through The Heart",
+		[12] = "Drop-Off",
+		[13] = "Crossing The Abyss",
+		[14] = "Tied Hands",
+		[15] = "Jailbreak",
+		[16] = "Matching Frame",
+		[17] = "Pushing Your Limits"
+	};
+
+	public static int CurrentLevelNumber;
+
 	[Header(" --- Level Manager Class --- ")]
 	[SerializeField] private GameObject blockGroupPrefab;
 	[Space]
-	[SerializeField] private List<ButtonObject> buttons = new List<ButtonObject>();
+	[SerializeField] private List<ButtonObject> buttons = new List<ButtonObject>( );
 	[SerializeField] private List<DoorObject> doors = new List<DoorObject>( );
 	[SerializeField] private List<BlockObject> blocks = new List<BlockObject>( );
+	[Space]
+	[SerializeField] public bool IsLevelComplete;
 
 	private void OnValidate ( ) {
 		blocks.Clear( );

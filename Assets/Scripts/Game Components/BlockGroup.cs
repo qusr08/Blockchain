@@ -128,7 +128,7 @@ public class BlockGroup : MonoBehaviour {
 	 * 
 	 * Vector2 direction				: The direction to move
 	 */
-	public void Move (Vector2 direction) {
+	public bool Move (Vector2 direction) {
 		if (CanMove) {
 			// A list for all the blocks that need to move when this group moves
 			List<BlockObject> blocksToMove = new List<BlockObject>( );
@@ -143,14 +143,14 @@ public class BlockGroup : MonoBehaviour {
 
 			for (int i = blocksToCheck.Count - 1; i >= 0; i--) {
 				if (blocksToCheck[i].IsDead) {
-					return;
+					return false;
 				}
 
 				// If the block was already checked, do not try and check it again because that will cause an infinite loop
 				if (!blocksAlreadyChecked.Contains(blocksToCheck[i])) {
 					// If this block will run into a wall, then do not move the entire group
 					if (blocksToCheck[i].CheckForWall(direction)) {
-						return;
+						return false;
 					}
 
 					// If there is a block that is going to be pushed by this group's blocks and not stick to them, add them to a list
@@ -184,7 +184,11 @@ public class BlockGroup : MonoBehaviour {
 			foreach (BlockObject block in blocksToMove) {
 				block.Move(direction);
 			}
+
+			return true;
 		}
+
+		return false;
 	}
 
 	/*

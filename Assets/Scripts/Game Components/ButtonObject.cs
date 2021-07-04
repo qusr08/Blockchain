@@ -14,14 +14,13 @@ public class ButtonObject : GameComponent {
 	[Space]
 	[SerializeField] public List<DoorObject> Doors = new List<DoorObject>( );
 
-	[HideInInspector] public bool IsFullyPressed;
-	private bool lastPressedState;
+	[HideInInspector] public bool IsFullyPressed; // If the button should stay on
+	private bool lastPressedState; // The last state of the button in the previous frame
 	private bool _isPressed;
 	public bool IsPressed {
 		get {
 			lastPressedState = _isPressed;
 
-			// Unity is dumb and forced my hand to check this. I have no idea why
 			if (levelManager == null) {
 				return false;
 			}

@@ -49,6 +49,13 @@ MonoBehaviour:
   pauseManager: {fileID: 0}
   connectedBlocks:
   - {fileID: 8238860077231780548}
+  CurrentLevelData:
+    LevelName: 
+    LevelNumber: 0
+    BestCompletionTime: 0
+    LeastMovesTaken: 0
+  CurrentLevelTime: 0
+  CurrentLevelMoves: 0
 --- !u!1001 &776748730932120893
 PrefabInstance:
   m_ObjectHideFlags: 0

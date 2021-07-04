@@ -58,6 +58,8 @@ public class TransitionManager : MonoBehaviour {
 
 		yield return new WaitForSeconds(TRANSITION_FADE_DURATION);
 
+		LevelManager.CurrentLevelNumber = levelIndex;
+
 		SceneManager.LoadScene(levelIndex);
 	}
 }

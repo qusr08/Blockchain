@@ -5,33 +5,31 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem {
-	/*
-	public static void Save ( ) {
+	public static void Save (PlayerGroup player) {
 		BinaryFormatter formatter = new BinaryFormatter( );
 
-		LevelInfo levelInfo = GameManager.currentLevelInfo;
-		string path = Application.persistentDataPath + $"/{levelInfo.LevelNumber}.level";
+		string path = Application.persistentDataPath + $"/{player.CurrentLevelData.LevelNumber}.level";
 		FileStream stream = new FileStream(path, FileMode.Create);
 
-		formatter.Serialize(stream, levelInfo);
+		LevelData levelData = new LevelData(player);
+		formatter.Serialize(stream, levelData);
 		stream.Close( );
 	}
 
-	public static void Load (int levelNumber) {
-		LevelInfo levelInfo = null;
+	public static LevelData Load (int levelNumber) {
+		LevelData levelData = null;
 		string path = Application.persistentDataPath + $"/{levelNumber}.level";
 
-		if (!File.Exists(path)) {
+		if (File.Exists(path)) {
 			BinaryFormatter formatter = new BinaryFormatter( );
 			FileStream stream = new FileStream(path, FileMode.Open);
 
-			levelInfo = formatter.Deserialize(stream) as LevelInfo;
+			levelData = formatter.Deserialize(stream) as LevelData;
 			stream.Close( );
 		} else {
-			Debug.LogError($"Save file not found! {path}");
+			levelData = new LevelData(levelNumber);
 		}
 
-		GameManager.currentLevelInfo = levelInfo;
+		return levelData;
 	}
-	*/
 }
