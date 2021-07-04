@@ -29,7 +29,7 @@
 > - Fixed sound effects being played multiple times over each other if two objects did something at the same time
 > - Made music fade in and out instead of hard-cutting at the end of songs
 > - Made sure two songs don't play back-to-back
-> - --- Made level name and number show up in level complete and pause menus
+> - Made level name and number show up in level complete and pause menus
 > - Made background move with mouse on the title screen
 > - Made background move slightly in-game when the player moves
 > - --- Added transitions between main menu states
