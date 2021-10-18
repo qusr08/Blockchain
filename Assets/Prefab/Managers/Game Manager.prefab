@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414003642286997792}
-  - component: {fileID: 3647776586983145205}
+  - component: {fileID: 2143644793027019799}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3647776586983145205
+--- !u!114 &2143644793027019799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,16 +169,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414003642286997798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20a7c3f4cfe50db46bc2ef18ff59f05f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1535b06568899e54db0e00eb82fdb4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 8770504407733319085}
   effectsAudioSource: {fileID: 8527253439824447847}
   music:
-  - {fileID: 8300000, guid: ca755e82aceb13b4a87e8b94b8d4e8d0, type: 3}
-  - {fileID: 8300000, guid: cfa59c25730bf9a41a1f20eb966ed269, type: 3}
   - {fileID: 8300000, guid: d7b190951cd8f9442a5135ae7b002767, type: 3}
+  - {fileID: 8300000, guid: cfa59c25730bf9a41a1f20eb966ed269, type: 3}
   - {fileID: 8300000, guid: 73d359b5cffeb0a40b87da311b591dc1, type: 3}
+  - {fileID: 8300000, guid: ca755e82aceb13b4a87e8b94b8d4e8d0, type: 3}
   currentSongIndex: 0
   effects:
   - List:
