@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1414003642286997792}
   m_RootOrder: 1
@@ -154,6 +155,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7610254365406652406}
   - {fileID: 5644759598583684014}
@@ -169,14 +171,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414003642286997798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1535b06568899e54db0e00eb82fdb4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 20a7c3f4cfe50db46bc2ef18ff59f05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 8770504407733319085}
   effectsAudioSource: {fileID: 8527253439824447847}
   music:
-  - {fileID: 8300000, guid: d7b190951cd8f9442a5135ae7b002767, type: 3}
   - {fileID: 8300000, guid: cfa59c25730bf9a41a1f20eb966ed269, type: 3}
+  - {fileID: 8300000, guid: d7b190951cd8f9442a5135ae7b002767, type: 3}
   - {fileID: 8300000, guid: 73d359b5cffeb0a40b87da311b591dc1, type: 3}
   - {fileID: 8300000, guid: ca755e82aceb13b4a87e8b94b8d4e8d0, type: 3}
   currentSongIndex: 0
@@ -186,11 +188,11 @@ MonoBehaviour:
   - List:
     - {fileID: 8300000, guid: 07558a7e635f2aa478ec8ba0b5256dee, type: 3}
   - List:
-    - {fileID: 8300000, guid: 073b33dfc7efe8346855c6b6397ad869, type: 3}
-  - List:
-    - {fileID: 8300000, guid: 2109466e14b9a6c48886eb7071e95b77, type: 3}
-    - {fileID: 8300000, guid: bb62550ab15f1d64283463e6dc60ea9c, type: 3}
     - {fileID: 8300000, guid: e866aa87bf55963459e22a5c187b760b, type: 3}
+    - {fileID: 8300000, guid: bb62550ab15f1d64283463e6dc60ea9c, type: 3}
+    - {fileID: 8300000, guid: 2109466e14b9a6c48886eb7071e95b77, type: 3}
+  - List:
+    - {fileID: 8300000, guid: 073b33dfc7efe8346855c6b6397ad869, type: 3}
 --- !u!1 &6734251287029906270
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +220,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1414003642286997792}
   m_RootOrder: 0

@@ -459,6 +459,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 968042746}
   m_RootOrder: 0
@@ -951,6 +952,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1302616521}
   - {fileID: 633750573}
@@ -1021,6 +1023,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 393869527}
   m_Father: {fileID: 626017898}
@@ -1253,6 +1256,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1141222134}
   m_RootOrder: 1
@@ -1486,6 +1490,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 497498800}
   - {fileID: 970416911}
@@ -1528,6 +1533,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1482196298}
   m_Father: {fileID: 393869527}
@@ -1627,7 +1633,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &633750577
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1640,6 +1646,7 @@ Animator:
   m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -1670,6 +1677,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 968042746}
   - {fileID: 1591995017}
@@ -2076,6 +2084,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 649821400}
   - {fileID: 626017898}
@@ -2301,6 +2310,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1482196298}
   m_RootOrder: 0
@@ -2390,6 +2400,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 158900897}
   m_Father: {fileID: 649821400}
@@ -2784,6 +2795,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838852842}
   - {fileID: 541447566}
@@ -2825,6 +2837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2857,6 +2870,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3032,6 +3046,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1730678012}
   - {fileID: 2006897145}
@@ -3126,6 +3141,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1641988633}
   m_RootOrder: 1
@@ -3516,6 +3532,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 939510095}
   m_Father: {fileID: 633750573}
@@ -3619,6 +3636,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1212979642}
   - {fileID: 741625348}
@@ -3822,6 +3840,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 91254095}
   - {fileID: 1354772002}
@@ -5050,6 +5069,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[2].List.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[3].List.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[2].List.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 073b33dfc7efe8346855c6b6397ad869, type: 3}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[3].List.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e866aa87bf55963459e22a5c187b760b, type: 3}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[3].List.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bb62550ab15f1d64283463e6dc60ea9c, type: 3}
+    - target: {fileID: 2143644793027019799, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
+      propertyPath: effects.Array.data[3].List.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2109466e14b9a6c48886eb7071e95b77, type: 3}
     - target: {fileID: 3647776586983145205, guid: 353a8256b8054bd4faa4a58cfca9421a, type: 3}
       propertyPath: levelButtonsParent
       value: 
