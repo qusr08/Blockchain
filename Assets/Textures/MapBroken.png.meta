@@ -309,7 +309,7 @@ TextureImporter:
       213: -9086989591579452169
     second: MapBroken_46
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -330,6 +330,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -339,8 +340,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -368,6 +369,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -383,6 +385,42 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -1393,6 +1431,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MapBroken_3: -1418408371467050782
+      MapBroken_38: 8509178392176883771
+      MapBroken_39: -6492614516693271422
+      MapBroken_41: -7068318837943635798
+      MapBroken_43: 60307963694714540
+      MapBroken_46: -9086989591579452169
+      MapBroken_0: -4915568996094754695
+      MapBroken_24: -7047990054622531699
+      MapBroken_30: -4816185122523649487
+      MapBroken_37: 6393104818047332099
+      MapBroken_42: 3262228348810482952
+      MapBroken_11: -3675184996358967589
+      MapBroken_26: 8893495763562354315
+      MapBroken_29: -6921777190511606470
+      MapBroken_14: -5642729063260895120
+      MapBroken_15: -1624794765805472279
+      MapBroken_35: 43614147830149634
+      MapBroken_7: 5308603657271263202
+      MapBroken_36: 3787739269706904304
+      MapBroken_16: 4980890479466774960
+      MapBroken_33: 3216891339564225856
+      MapBroken_27: 628486681942242940
+      MapBroken_22: -7392419701613159496
+      MapBroken_6: 1595127499997669859
+      MapBroken_18: 2509745521015275523
+      MapBroken_9: 4109501146928233578
+      MapBroken_12: -9199103141640600520
+      MapBroken_31: -6418345307722809705
+      MapBroken_40: 191743119220378763
+      MapBroken_34: -7076422923915585292
+      MapBroken_45: -699909735076175989
+      MapBroken_20: 471538348193734223
+      MapBroken_23: 1728534276274844259
+      MapBroken_4: -787942767729743500
+      MapBroken_21: -7516597862757962479
+      MapBroken_5: -2720335638316426071
+      MapBroken_8: 744612513010636679
+      MapBroken_28: -6008919938835426951
+      MapBroken_1: -5395693755317796224
+      MapBroken_17: 1090160372070923068
+      MapBroken_13: 5551833495220163625
+      MapBroken_19: -7717443356407575574
+      MapBroken_32: -8284941268926496085
+      MapBroken_25: -4340502036354092498
+      MapBroken_2: -451096672148629722
+      MapBroken_44: 1819106493309036692
+      MapBroken_10: 8880424486481540894
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
